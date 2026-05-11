@@ -558,11 +558,46 @@ main {
   transform: translateY(0);
 }
 
+
+.certificates-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.certificate-card p {
+  flex: 1;
+  margin: 0;
+}
+
+.certificate-badge {
+  width: fit-content;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(126, 216, 255, 0.1);
+  color: var(--accent-strong);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.certificate-card .attachment-card {
+  width: fit-content;
+  margin-top: auto;
+}
+
 @media (max-width: 960px) {
   .topbar,
   .hero-panel,
   .two-column,
   .reading-grid,
+  .certificates-grid,
   .project-access-grid,
   .index-grid,
   .contact-panel {
